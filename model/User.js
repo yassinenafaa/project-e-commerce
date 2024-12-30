@@ -1,16 +1,16 @@
-// 1 require mongoose 
-const mongoose = require("mongoose")
+// 1 require mongoose
+const mongoose = require("mongoose");
 
-// 2 schema 
-const { Schema, model } = mongoose
+// 2 schema
+const { Schema, model } = mongoose;
 
-// 3  create schema 
+// 3  create schema
 const UserSchema = new Schema({
-    name: { type: String, required: true },
-    email: { type: String, required: true },
-    password: { type: String, required: true },
-    phone: String,
-})
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  phone: Number,
+});
 
-// export to the database model 
-module.exports = User = model("user", UserSchema)
+// 4 export to the database model
+module.exports = User = model("user", UserSchema);
